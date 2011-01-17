@@ -1,0 +1,70 @@
+
+#pullToRefresh {
+width:100%;
+height:3em;
+
+background-color:rgba(100,100,255,1.0);
+}
+
+   .invis {
+   margin-top:-3em;
+   }
+   
+   .vis {
+   margin-top:0;
+   }
+
+   #refreshArrow {
+   float:left;
+  -webkit-transition: all 0.5s linear;
+   }
+   
+   #refreshMsg {
+   float:left;
+   }
+   
+      #refreshText {
+      font-size:large;
+      text-align:center;
+      }
+      
+      #refreshTime {
+      font-size:small;
+      text-align:center;
+      }
+      
+      #refreshTime span {
+      float:left;
+      clear:right;
+      }
+      
+      
+      #spinny {
+      width:24px;
+      height:24px;
+      float:left;
+      background: url(../images/spinny.png) center center;
+      -webkit-mask-size: 24px 24px;
+      -webkit-animation-name: spinnage;
+   	-webkit-animation-duration: 1s;
+   	-webkit-animation-iteration-count: infinite;
+   	-webkit-animation-timing-function: linear;
+      }     
+      
+      @-webkit-keyframes spinnage { 
+         from {
+           -webkit-transform: rotate(0deg);
+         }
+        
+         to {
+           -webkit-transform: rotate(360deg);
+         }
+      }
+
+#first-container {
+width:100%;
+min-height:480px;
+
+font-size:xxlarge;
+text-align:center;
+}
