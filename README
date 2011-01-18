@@ -1,3 +1,7 @@
 This was originally worked out by Connor La Combe (@connorlacombe on twitter)
 
 Modified by Jeremy Forsythe (@jdfsoftware on twitter)
+
+v2.0.1
+- reset the message if the device auto-releases the scroll (if you hold the scroll past the screen for too long)
+- "genericized" the methods for ease of plugging into apps

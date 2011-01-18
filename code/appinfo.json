@@ -1,6 +1,6 @@
 {
 	"id": "com.kandutech.refresh",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"vendor": "kandutech and jdf software",
 	"type": "web",
 	"main": "index.html",
