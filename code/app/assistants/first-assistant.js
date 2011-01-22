@@ -68,7 +68,7 @@ FirstAssistant.prototype.setupPullToRefresh = function() {
    this.refreshingMsg = '<div id="spinny"></div><span>Refreshing.. please wait..</span>';
 
    // DOM references
-   this.scroller = this.controller.get("scroller");
+   this.scroller = this.controller.getSceneScroller();
    this.refreshBlock = this.controller.get("pullToRefresh");
    this.refreshText = this.controller.get("refreshText");
    this.refreshTime = this.controller.get("refreshTime");
@@ -82,11 +82,6 @@ FirstAssistant.prototype.setupPullToRefresh = function() {
    this.scrolling = this.scrolling.bind(this);
    this.releaseScroll = this.releaseScroll.bind(this);
 
-   // setup scroller widget
-	this.controller.setupWidget("scroller",
-	   { mode: "vertical"},
-	   {}
-	);
 };
 
 FirstAssistant.prototype.scrollStarted = function(event) {
@@ -94,7 +89,7 @@ FirstAssistant.prototype.scrollStarted = function(event) {
 };
 
 FirstAssistant.prototype.scrolling = function(event) {
-	var scrollY = scroller.mojo.getScrollPosition().top;
+	var scrollY = this.scroller.mojo.getScrollPosition().top;
 	if(scrollY >= 65) {
 	   // Make sure the user REALLY meant to refresh by making them hold it there for 50ms.
 		setTimeout(function() {
@@ -107,7 +102,7 @@ FirstAssistant.prototype.scrolling = function(event) {
 };
 
 FirstAssistant.prototype.releaseScroll = function(event) {
-	var scrollY = scroller.mojo.getScrollPosition().top;
+	var scrollY = this.scroller.mojo.getScrollPosition().top;
 	
 	if(scrollY <= 20) {
 		//webOS did the thing that doesn't let you hold the list past the regular scroll limit :(
